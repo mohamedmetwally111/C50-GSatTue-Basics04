@@ -1,4 +1,5 @@
-﻿using static System.Runtime.InteropServices.JavaScript.JSType;
+﻿using System.Runtime.Intrinsics.X86;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace C50_GSatTue_Basics04
 {
@@ -29,7 +30,14 @@ namespace C50_GSatTue_Basics04
 
             #region Question 4
             //Q4. Write a method PrintBookTitle(string title) that prints "Book title: " + title. Call it with "Clean Code".
-            PrintBookTitle("Clean Code");
+            //PrintBookTitle("Clean Code");
+            #endregion
+
+            #region Question 5
+            //Q5. Write a method AddBonusPages(int pages) that adds 50 to pages. Call it with a variable int pages = 400; and print pages afterward. What do you expect to see, and why? 
+            int pages = 400;
+            AddBonusPages(pages);
+            Console.WriteLine(pages);
             #endregion
         }
 
@@ -41,6 +49,11 @@ namespace C50_GSatTue_Basics04
         static void PrintBookTitle(string title)
         {
             Console.WriteLine("Book title: " + title);
+        }
+
+        static void AddBonusPages(int pages)
+        {
+            pages += 50;
         }
     }
 }
