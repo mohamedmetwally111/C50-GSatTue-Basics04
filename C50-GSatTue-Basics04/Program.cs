@@ -64,10 +64,16 @@ namespace C50_GSatTue_Basics04
 
             #region Question 9
             //Q9.Write a method bool TryGetPrice(string title, out double price) that returns true and sets price to 25.5 if title is "Clean Code", otherwise returns false and sets price to 0.Call it and print the price if found  
-            if(TryGetPrice("Clean Code", out double price))
-            {
-                Console.WriteLine(price);
-            }
+            //if(TryGetPrice("Clean Code", out double price))
+            //{
+            //    Console.WriteLine(price);
+            //}
+            #endregion
+
+            #region Question 10
+            //Q10.Write a method PrintBookInfo(string title, int pages = 300) where pages is optional. Call it once with only a title, and once passing both a title and pages.
+            PrintBookInfo("Clean Code");
+            PrintBookInfo("C# in Depth", 450);
             #endregion
         }
 
@@ -114,6 +120,12 @@ namespace C50_GSatTue_Basics04
                 price = 0;
                 return false;
             }
+        }
+
+        static void PrintBookInfo(string title, int pages=300)
+        {
+            Console.WriteLine("Book: " + title);
+            Console.WriteLine("Pages: " + pages);
         }
     }
 }
