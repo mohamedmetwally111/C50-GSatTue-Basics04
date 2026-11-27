@@ -1,4 +1,5 @@
 ﻿using System.Drawing;
+using System.Reflection;
 using System.Runtime.Intrinsics.X86;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 
@@ -72,8 +73,13 @@ namespace C50_GSatTue_Basics04
 
             #region Question 10
             //Q10.Write a method PrintBookInfo(string title, int pages = 300) where pages is optional. Call it once with only a title, and once passing both a title and pages.
-            PrintBookInfo("Clean Code");
-            PrintBookInfo("C# in Depth", 450);
+            //PrintBookInfo("Clean Code");
+            //PrintBookInfo("C# in Depth", 450);
+            #endregion
+
+            #region Question 11
+            //Q11.Using the PrintBookInfo method from the question above, call it by naming the parameters, passing pages before title.
+            PrintBookInfo(pages: 500, title: ".Net");
             #endregion
         }
 
